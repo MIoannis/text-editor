@@ -1,0 +1,41 @@
+.container {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+.container-theme {
+  background: black;
+  width: 100%;
+  height: 100%;
+}
+
+.side-bar-content {
+  position: fixed;
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 240px;
+  padding: 20px;
+}
+
+button {
+  background: #ffd4e9;
+  border: 0px;
+}
+
+button:hover {
+  border-radius: 20px;
+  background: darkgrey;
+}
+
+.features-word {
+  font-weight: bold;
+  font-size: large;
+}
+
+fa-icon {
+  color: black;
+}
+
