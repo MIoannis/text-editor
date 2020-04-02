@@ -11,9 +11,14 @@ import {faPalette} from '@fortawesome/free-solid-svg-icons';
 export class AppComponent implements OnInit {
   faPalette = faPalette;
   faCog = faCog;
-  showFiller = false;
   checked = false;
   color = '';
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 
   colorChange(color: string): string {
     this.color = color;
@@ -22,8 +27,5 @@ export class AppComponent implements OnInit {
     } else {
       return this.color = 'black';
     }
-  }
-
-  ngOnInit(): void {
   }
 }

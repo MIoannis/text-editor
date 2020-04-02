@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TextHandlerComponent } from './text-handler/text-handler.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+import { AboutComponent } from './about/about.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -16,10 +18,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     TextHandlerComponent,
+    TopMenuComponent,
+    AboutComponent,
   ],
   imports: [
     MatSlideToggleModule,

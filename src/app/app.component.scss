@@ -10,7 +10,7 @@
 }
 
 .side-bar-content {
-  position: fixed;
+  position: sticky;
   display: flex;
   height: 100%;
 }
@@ -20,14 +20,13 @@
   padding: 20px;
 }
 
-button {
-  background: #ffd4e9;
-  border: 0px;
+.icon-button {
+  border-radius: 0;
+  background: #4a76a8;
 }
 
-button:hover {
-  border-radius: 20px;
-  background: darkgrey;
+.icon-button:hover {
+  background: #34476D;
 }
 
 .features-word {
@@ -35,7 +34,9 @@ button:hover {
   font-size: large;
 }
 
-fa-icon {
+.facog {
+  position: fixed;
+  bottom: 50%;
+  left: 19px;
   color: black;
 }
-
