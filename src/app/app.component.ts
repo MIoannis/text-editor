@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {SessionQuery} from './AkitaStore/session.query';
+import {SessionService} from './AkitaStore/session.service';
 
 import {faCog} from '@fortawesome/free-solid-svg-icons';
 import {faPalette} from '@fortawesome/free-solid-svg-icons';
@@ -12,20 +14,15 @@ export class AppComponent implements OnInit {
   faPalette = faPalette;
   faCog = faCog;
   checked = false;
-  color = '';
 
-  constructor() {
+  constructor(private sessionQuery: SessionQuery,
+              private sessionService: SessionService) {
+    this.sessionQuery.checkValue$.subscribe(x => this.checked = x);
   }
 
   ngOnInit(): void {
   }
-
-  colorChange(color: string): string {
-    this.color = color;
-    if (this.checked) {
-      return this.color = 'white';
-    } else {
-      return this.color = 'black';
-    }
+  eventCheck(status) {
+    this.sessionService.update(status.checked);
   }
 }

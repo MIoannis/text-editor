@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
 
 export interface SessionState {
-   theme: string;
+   checked: boolean;
 }
 
 export function createInitialState(): SessionState {
   return {
-    theme: ''
+    checked: false
   };
 }
 

@@ -1,22 +1,40 @@
+div {
+  font-family: "Segoe UI", serif;
+}
+
 .inputphrase {
   font-size: 15pt;
   font-weight: bold;
-  font-family: "Segoe UI", serif;
   position: relative;
-  left: 21em;
-  top: 15em;
+  left: 100px;
+  top: 100px;
+}
+
+.inputphrase-theme {
+  font-size: 15pt;
+  font-weight: bold;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  color: white;
 }
 
 label {
   position: relative;
-  left: 45em;
-  top: 20em;
+  left: 315px;
+  top: 75px;
 }
 
 textarea {
+  min-height: 128px;
+  max-height: 770px;
+  min-width: 420px;
+  max-width: 1380px;
+  position: relative;
+  left: 315px;
+  top: 75px;
   border-width: 4px;
   border-color: black;
   border-style: double;
-  font-family: "Segoe UI", serif;
-  font-size: xx-large;
+  font-size: x-large;
 }

@@ -1,10 +1,11 @@
 .container {
+  font-family: "Segoe UI", serif;
   background: white;
   width: 100%;
   height: 100%;
 }
 .container-theme {
-  background: black;
+  background: #1c1c1c;
   width: 100%;
   height: 100%;
 }
@@ -22,7 +23,7 @@
 
 .icon-button {
   border-radius: 0;
-  background: #4a76a8;
+  background: #446ca8;
 }
 
 .icon-button:hover {
@@ -39,4 +40,9 @@
   bottom: 50%;
   left: 19px;
   color: black;
+}
+
+.darktheme-phrase {
+  margin-bottom: 0;
+  margin-top: 20px;
 }

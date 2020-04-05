@@ -4,22 +4,23 @@ div {
   }
   height: 72px;
   background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(39,39,84,1) 35%, rgba(0,212,255,1) 100%);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(33,64,107,1) 0%, rgba(32,87,111,1) 37%, rgba(39,39,84,1) 78%, rgba(2,191,224,1) 100%);
 }
 
 p {
+  font-family: "Segoe UI", serif;
   font-size: x-large;
   color: white;
   cursor: pointer;
   outline: none;
 }
 
-.editor {
+.editor-word {
   margin-top: 24px;
-  margin-left: 2em;
+  margin-left: 2.5em;
   color: white;
 }
 
-.about {
-  margin-left: 5%;
+.about-word {
+  margin-left: 10%;
 }
