@@ -1,7 +1,7 @@
 <app-top-menu></app-top-menu>
 
 <!-- Main sidebar HTML -->
-<mat-drawer-container [ngClass]="{'container-theme':this.checked}" class="container" autosize>
+<mat-drawer-container [ngClass]="{'container-theme':checkValue$}" class="container" autosize>
 
   <mat-drawer #drawer class="sidebar">
     <p class="features-word">Settings</p>
@@ -12,7 +12,7 @@
       <input type="color" value="#000000">
     </button>
     <p class="darktheme-phrase">Dark theme</p>
-    <mat-slide-toggle (change)="eventCheck($event)" color="primary"></mat-slide-toggle>
+    <mat-slide-toggle (change)="eventCheck($event)"></mat-slide-toggle>
   </mat-drawer>
 
   <div class="side-bar-content">
