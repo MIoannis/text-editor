@@ -14,12 +14,11 @@ import {faPalette} from '@fortawesome/free-solid-svg-icons';
 export class AppComponent implements OnInit {
   faPalette = faPalette;
   faCog = faCog;
-  checkValue$: Observable<boolean>;
+  checkValue: boolean;
 
   constructor(private sessionQuery: SessionQuery,
               private sessionService: SessionService) {
-    this.checkValue$ = this.sessionQuery.checkValue$;
-    this.sessionQuery.checkValue$.subscribe(x => this.checkValue$ = x);
+    this.sessionQuery.checkValue$.subscribe(x => this.checkValue = x);
   }
 
   ngOnInit(): void {
