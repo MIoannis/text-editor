@@ -3,11 +3,23 @@ import { Store, StoreConfig } from '@datorama/akita';
 
 export interface SessionState {
    checked: boolean;
+   bold: string;
+   italic: string;
+   underline: string;
+   color: string;
+   font: string;
+   text: string;
 }
 
 export function createInitialState(): SessionState {
   return {
-    checked: false
+    checked: false,
+    bold: '',
+    italic: '',
+    underline: '',
+    color: '',
+    font: '',
+    text: '',
   };
 }
 
@@ -18,6 +30,5 @@ export class SessionStore extends Store<SessionState> {
   constructor() {
     super(createInitialState());
   }
-
 }
 

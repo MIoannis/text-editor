@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SessionQuery} from './AkitaStore/session.query';
 import {SessionService} from './AkitaStore/session.service';
-import {Observable} from 'rxjs';
 
 import {faCog} from '@fortawesome/free-solid-svg-icons';
 import {faPalette} from '@fortawesome/free-solid-svg-icons';
@@ -17,13 +16,13 @@ export class AppComponent implements OnInit {
   checkValue: boolean;
 
   constructor(private sessionQuery: SessionQuery,
-              private sessionService: SessionService) {
-    this.sessionQuery.checkValue$.subscribe(x => this.checkValue = x);
-  }
+              private sessionService: SessionService) { }
 
   ngOnInit(): void {
+    this.sessionQuery.checkedValue$.subscribe(x => this.checkValue = x);
   }
+
   eventCheck(status) {
-    this.sessionService.update(status.checked);
+    this.sessionService.updateCheckValue(status.checked);
   }
 }

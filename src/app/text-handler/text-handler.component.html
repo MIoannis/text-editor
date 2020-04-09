@@ -1,4 +1,12 @@
-<div>
-  <p [ngClass]="{'inputphrase-theme':checkValue}" class="inputphrase">Input your text here:</p>
-  <textarea></textarea>
+<div class="main">
+  <button class="copybutton" (click)="copyToClipboard()">Copy</button>
+  <p [ngClass]="{'inputphrase-theme':checkedValue}" class="inputphrase"></p>
+  <div class="list" (click)="textKek()">
+    <span contenteditable="true" class="textarea" id="textarea" [ngStyle]="{'font-family': font, color: color,
+    'font-style': 'italic','font-weight': 'bold'}">
+      <span class="wrapper">
+        <span *ngIf="text">Print text</span>
+      </span>
+    </span>
+  </div>
 </div>

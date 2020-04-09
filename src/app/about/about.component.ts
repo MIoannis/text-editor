@@ -7,13 +7,11 @@ import {SessionQuery} from '../AkitaStore/session.query';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  checkValue: boolean;
+  checkedValue: boolean;
 
-  constructor(private sessionQuery: SessionQuery) {
-    this.sessionQuery.checkValue$.subscribe(x => this.checkValue = x);
-  }
+  constructor(private sessionQuery: SessionQuery) { }
 
   ngOnInit(): void {
+    this.sessionQuery.checkedValue$.subscribe(x => this.checkedValue = x);
   }
-
 }

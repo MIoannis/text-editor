@@ -7,10 +7,7 @@
     <p class="features-word">Settings</p>
 
     <!--TODO make logic for changing text color-->
-    <button>
-      <fa-icon [icon]="faPalette" size="2x"></fa-icon>
-      <input type="color" value="#000000">
-    </button>
+    <fa-icon [icon]="faPalette" size="2x"></fa-icon>
     <p class="darktheme-phrase">Dark theme</p>
     <mat-slide-toggle (change)="eventCheck($event)"></mat-slide-toggle>
   </mat-drawer>

@@ -1,40 +1,30 @@
-div {
-  font-family: "Segoe UI", serif;
+.list{
+  background-color: white;
 }
 
 .inputphrase {
   font-size: 15pt;
   font-weight: bold;
-  position: relative;
-  left: 100px;
-  top: 100px;
 }
 
 .inputphrase-theme {
   font-size: 15pt;
   font-weight: bold;
-  position: relative;
-  left: 100px;
-  top: 100px;
   color: white;
 }
 
-label {
-  position: relative;
-  left: 315px;
-  top: 75px;
+.textarea {
+  width: 800px;
+  position: inherit;
+  outline: 0;
+  cursor: text;
 }
 
-textarea {
-  min-height: 128px;
-  max-height: 770px;
-  min-width: 420px;
-  max-width: 1380px;
-  position: relative;
-  left: 315px;
-  top: 75px;
-  border-width: 4px;
-  border-color: black;
-  border-style: double;
-  font-size: x-large;
+.copybutton {
+  outline: 0;
+}
+
+.list {
+  border-width: 1px;
+  border-style: solid;
 }
