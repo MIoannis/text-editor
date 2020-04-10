@@ -1,16 +1,16 @@
 <div class="edit-buttons">
   <button class="boldbutton" style="font-weight: bold" (click)="boldEvent($event)">B</button>
   <button class="italicbutton" style="font-style: italic" (click)="italicEvent($event)">I</button>
-  <button class="underlinebutton" style="text-decoration: underline">U</button>
+  <button class="underlinebutton" style="text-decoration: underline" (click)="underlineEvent($event)">U</button>
   <button class="copybutton" (click)="copyToClipboard()">Copy</button>
 </div>
 <div class="main">
   <p [ngClass]="{'inputphrase-theme':checkedValue}" class="inputphrase"></p>
-  <div class="list" (click)="contenteditableChangeValue()">
-    <span class="wrapper" [ngStyle]="{'border-bottom-color': color}">
+  <div class="list" (click)="printChangeValue()">
+    <span [ngClass]="{'wrapper': underline}" [ngStyle]="{'border-bottom-color': color}">
       <span contenteditable="true" class="textarea" id="textarea" [ngStyle]="{'font-family': font, color: color,
       'font-style': italic,'font-weight': bold}">
-        <span style="font-style: italic" *ngIf="contenteditable" class="print">Print text...</span>
+        <span style="font-style: italic" class="print">{{print}}</span>
       </span>
     </span>
   </div>

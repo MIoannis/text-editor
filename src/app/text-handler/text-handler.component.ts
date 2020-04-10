@@ -8,21 +8,20 @@ import { SessionService} from '../AkitaStore/session.service';
   styleUrls: ['./text-handler.component.scss']
 })
 export class TextHandlerComponent implements OnInit {
-  contenteditable = true;
   font: string;
   color: string;
   checkedValue: boolean;
   italic: string;
   bold: string;
-  underline: string;
+  underline: boolean;
   el: HTMLElement;
+  print = 'Print text...';
 
   constructor(private sessionQuery: SessionQuery,
               private sessionService: SessionService) { }
 
   ngOnInit(): void {
     this.sessionQuery.selectColor$.subscribe(x => this.color = x);
-    this.sessionQuery.contenteditableCheckValue$.subscribe(x => this.contenteditable = x);
     this.sessionQuery.selectFont$.subscribe(x => this.font = x);
     this.sessionQuery.checkedValue$.subscribe(x => this.checkedValue = x);
     this.sessionQuery.italicValue$.subscribe(x => this.italic = x);
@@ -30,8 +29,8 @@ export class TextHandlerComponent implements OnInit {
     this.sessionQuery.underlineValue$.subscribe(x => this.underline = x);
   }
 
-  contenteditableChangeValue(): boolean {
-    return this.contenteditable = false;
+  printChangeValue(): string {
+    return this.print = '';
   }
 
   copyToClipboard() {
@@ -56,5 +55,14 @@ export class TextHandlerComponent implements OnInit {
       this.italic = 'italic';
     }
     this.sessionService.updateStateItalic(status.italic);
+  }
+
+  underlineEvent(status) {
+    if (this.underline === false) {
+      this.underline = true;
+    } else {
+      this.underline = false;
+    }
+    this.sessionService.updateStateUnderline(status.underline);
   }
 }

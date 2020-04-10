@@ -27,7 +27,7 @@ export class SessionService {
     this.sessionStore.update({italic});
   }
 
-  updateStateUnderline(underline: string) {
+  updateStateUnderline(underline: boolean) {
     this.sessionStore.update({underline});
   }
 
