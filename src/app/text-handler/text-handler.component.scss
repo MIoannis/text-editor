@@ -1,5 +1,5 @@
-.list{
-  background-color: white;
+.main{
+  width: 1839px;
 }
 
 .inputphrase {
@@ -13,6 +13,16 @@
   color: white;
 }
 
+.list {
+  background-color: white;
+  padding-top: 20px;
+  height: 900px;
+  width: 636px;
+  margin-left: 600px;
+  border-width: 1px;
+  border-style: solid;
+}
+
 .textarea {
   width: 800px;
   position: inherit;
@@ -20,11 +30,22 @@
   cursor: text;
 }
 
-.copybutton {
+.edit-buttons {
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  width: 1839px;
   outline: 0;
+
 }
 
-.list {
-  border-width: 1px;
-  border-style: solid;
+.print {
+  font-size: 2em;
+  color: rgba(98, 94, 94, 0.5);
+}
+
+.wrapper {
+  margin-left: 10px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
 }

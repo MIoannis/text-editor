@@ -4,6 +4,7 @@ import { SessionStore, SessionState } from './session.store';
 
 @Injectable({ providedIn: 'root' })
 export class SessionQuery extends Query<SessionState> {
+  contenteditableCheckValue$ = this.select(store => store.contenteditable);
   checkedValue$ = this.select(store => store.checked);
   italicValue$ = this.select(store => store.italic);
   boldValue$ = this.select(store => store.bold);

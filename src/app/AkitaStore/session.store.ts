@@ -2,17 +2,19 @@ import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
 
 export interface SessionState {
-   checked: boolean;
-   bold: string;
-   italic: string;
-   underline: string;
-   color: string;
-   font: string;
-   text: string;
+  contenteditable: boolean;
+  checked: boolean;
+  bold: string;
+  italic: string;
+  underline: string;
+  color: string;
+  font: string;
+  text: string;
 }
 
 export function createInitialState(): SessionState {
   return {
+    contenteditable: true,
     checked: false,
     bold: '',
     italic: '',
@@ -31,4 +33,3 @@ export class SessionStore extends Store<SessionState> {
     super(createInitialState());
   }
 }
-

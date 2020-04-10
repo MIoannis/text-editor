@@ -8,7 +8,7 @@ import { SessionService} from '../AkitaStore/session.service';
   styleUrls: ['./text-handler.component.scss']
 })
 export class TextHandlerComponent implements OnInit {
-  text = true;
+  contenteditable = true;
   font: string;
   color: string;
   checkedValue: boolean;
@@ -22,6 +22,7 @@ export class TextHandlerComponent implements OnInit {
 
   ngOnInit(): void {
     this.sessionQuery.selectColor$.subscribe(x => this.color = x);
+    this.sessionQuery.contenteditableCheckValue$.subscribe(x => this.contenteditable = x);
     this.sessionQuery.selectFont$.subscribe(x => this.font = x);
     this.sessionQuery.checkedValue$.subscribe(x => this.checkedValue = x);
     this.sessionQuery.italicValue$.subscribe(x => this.italic = x);
@@ -29,15 +30,31 @@ export class TextHandlerComponent implements OnInit {
     this.sessionQuery.underlineValue$.subscribe(x => this.underline = x);
   }
 
-  textKek(): boolean {
-    return  this.text = false;
+  contenteditableChangeValue(): boolean {
+    return this.contenteditable = false;
   }
 
   copyToClipboard() {
     this.el = document.getElementById('textarea');
-    this.el.setAttribute('contenteditable', 'true');
     document.execCommand('selectAll');
     document.execCommand('copy');
-    this.el.setAttribute('contenteditable', 'false');
+  }
+
+  boldEvent(status) {
+    if (this.bold === 'bold') {
+      this.bold = '';
+    } else {
+      this.bold = 'bold';
+    }
+    this.sessionService.updateStateBold(status.bold);
+  }
+
+  italicEvent(status) {
+    if (this.italic === 'italic') {
+      this.italic = '';
+    } else {
+      this.italic = 'italic';
+    }
+    this.sessionService.updateStateItalic(status.italic);
   }
 }

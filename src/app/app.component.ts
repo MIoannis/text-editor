@@ -3,7 +3,6 @@ import {SessionQuery} from './AkitaStore/session.query';
 import {SessionService} from './AkitaStore/session.service';
 
 import {faCog} from '@fortawesome/free-solid-svg-icons';
-import {faPalette} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,6 @@ import {faPalette} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  faPalette = faPalette;
   faCog = faCog;
   checkValue: boolean;
 
