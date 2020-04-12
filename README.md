@@ -8,8 +8,8 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ## Development 
 
-This is the early stage of development.
-Right now I am trying to create some features and friendly UI.
+This is an end stage of development.
+Right now I am developing some last features and fixing bugs. Release will be in a few days. 
 
 ## Version
 

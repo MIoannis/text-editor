@@ -7,9 +7,10 @@ export class SessionQuery extends Query<SessionState> {
   checkedValue$ = this.select(store => store.checked);
   italicValue$ = this.select(store => store.italic);
   boldValue$ = this.select(store => store.bold);
-  underlineValue$ = this.select('underline');
-  selectFont$ = this.select('font');
-  selectColor$ = this.select('color');
+  underlineValue$ = this.select(store => store.underline);
+  selectFontSize$ = this.select(store => store.fontsize)
+  selectFont$ = this.select(store => store.font);
+  selectColor$ = this.select(store => store.color);
 
   constructor(protected store: SessionStore) {
     super(store);

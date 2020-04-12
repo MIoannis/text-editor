@@ -9,8 +9,8 @@ import { SessionService} from '../AkitaStore/session.service';
 })
 export class TextHandlerComponent implements OnInit {
   font: string;
+  fontsize: number;
   color: string;
-  checkedValue: boolean;
   italic: string;
   bold: string;
   underline: boolean;
@@ -21,9 +21,9 @@ export class TextHandlerComponent implements OnInit {
               private sessionService: SessionService) { }
 
   ngOnInit(): void {
+    this.sessionQuery.selectFontSize$.subscribe(x => this.fontsize = x);
     this.sessionQuery.selectColor$.subscribe(x => this.color = x);
     this.sessionQuery.selectFont$.subscribe(x => this.font = x);
-    this.sessionQuery.checkedValue$.subscribe(x => this.checkedValue = x);
     this.sessionQuery.italicValue$.subscribe(x => this.italic = x);
     this.sessionQuery.boldValue$.subscribe(x => this.bold = x);
     this.sessionQuery.underlineValue$.subscribe(x => this.underline = x);
@@ -39,30 +39,22 @@ export class TextHandlerComponent implements OnInit {
     document.execCommand('copy');
   }
 
-  boldEvent(status) {
+  boldEvent() {
     if (this.bold === 'bold') {
-      this.bold = '';
-    } else {
-      this.bold = 'bold';
-    }
-    this.sessionService.updateStateBold(status.bold);
+      this.bold = null;
+    } else {this.bold = 'bold'; }
+    this.sessionService.updateStateBold(this.bold);
   }
 
-  italicEvent(status) {
+  italicEvent() {
     if (this.italic === 'italic') {
-      this.italic = '';
-    } else {
-      this.italic = 'italic';
-    }
-    this.sessionService.updateStateItalic(status.italic);
+      this.italic = null;
+    } else {this.italic = 'italic'; }
+    this.sessionService.updateStateItalic(this.italic);
   }
 
-  underlineEvent(status) {
-    if (this.underline === false) {
-      this.underline = true;
-    } else {
-      this.underline = false;
-    }
-    this.sessionService.updateStateUnderline(status.underline);
+  underlineEvent() {
+    this.underline = this.underline === false;
+    this.sessionService.updateStateUnderline(this.underline);
   }
 }

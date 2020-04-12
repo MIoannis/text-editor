@@ -3,23 +3,23 @@ import { Store, StoreConfig } from '@datorama/akita';
 
 export interface SessionState {
   checked: boolean;
+  underline: boolean;
   bold: string;
   italic: string;
-  underline: boolean;
   color: string;
   font: string;
-  text: string;
+  fontsize: number;
 }
 
 export function createInitialState(): SessionState {
   return {
     checked: false,
-    bold: '',
-    italic: '',
     underline: false,
-    color: '',
-    font: '',
-    text: '',
+    bold: null,
+    italic: null,
+    color: null,
+    font: null,
+    fontsize: 6,
   };
 }
 

@@ -1,23 +1,12 @@
 .main{
   width: 1839px;
-}
-
-.inputphrase {
-  font-size: 15pt;
-  font-weight: bold;
-}
-
-.inputphrase-theme {
-  font-size: 15pt;
-  font-weight: bold;
-  color: white;
+  height: 952px;
 }
 
 .list {
+  outline: 0;
   background-color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
+  padding: 10px;
   height: 900px;
   width: 636px;
   margin-left: 600px;
@@ -26,7 +15,6 @@
 }
 
 .textarea {
-  width: 800px;
   position: inherit;
   outline: 0;
   cursor: text;
@@ -42,11 +30,11 @@
 }
 
 .print {
-  font-size: 2em;
   color: rgba(98, 94, 94, 0.5);
 }
 
 .wrapper {
-  border-bottom-width: 2px;
+  border-bottom-color: red;
+  border-bottom-width: 1.5px;
   border-bottom-style: solid;
 }

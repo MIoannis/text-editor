@@ -11,14 +11,6 @@ export class SessionService {
     this.sessionStore.update({checked});
   }
 
-  updateFont(font: string) {
-    this.sessionStore.update({font});
-  }
-
-  updateColor(color: string) {
-    this.sessionStore.update({color});
-  }
-
   updateStateBold(bold: string) {
     this.sessionStore.update({bold});
   }
@@ -31,7 +23,11 @@ export class SessionService {
     this.sessionStore.update({underline});
   }
 
-  updateText(text: string) {
-    this.sessionStore.update({text});
+  updateFont(font: string) {
+    this.sessionStore.update({font});
+  }
+
+  updateColor(color: string) {
+    this.sessionStore.update({color});
   }
 }
