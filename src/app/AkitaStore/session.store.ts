@@ -8,7 +8,7 @@ export interface SessionState {
   italic: string;
   color: string;
   font: string;
-  fontsize: number;
+  fontsize: string;
 }
 
 export function createInitialState(): SessionState {
@@ -17,9 +17,9 @@ export function createInitialState(): SessionState {
     underline: false,
     bold: null,
     italic: null,
-    color: null,
-    font: null,
-    fontsize: 6,
+    color: 'Black',
+    font: 'Times New Roman',
+    fontsize: '1em',
   };
 }
 

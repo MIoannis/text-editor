@@ -6,7 +6,7 @@
 .list {
   outline: 0;
   background-color: white;
-  padding: 10px;
+  padding: 12px;
   height: 900px;
   width: 636px;
   margin-left: 600px;
@@ -15,12 +15,14 @@
 }
 
 .textarea {
+  line-height: 1em;
   position: inherit;
   outline: 0;
   cursor: text;
 }
 
 .edit-buttons {
+  background-color: rgba(255, 255, 255, 0.5);
   height: 32px;
   display: inline-flex;
   justify-content: center;
@@ -37,4 +39,21 @@
   border-bottom-color: red;
   border-bottom-width: 1.5px;
   border-bottom-style: solid;
+}
+
+.select {
+  position: absolute;
+}
+
+.select-font {
+  position: inherit;
+  height: 34px;
+  top: 7px;
+  left: 400px;
+}
+
+.select-font-size {
+  position: inherit;
+  height: 34px;
+  left: 350px;
 }

@@ -27,6 +27,10 @@ export class SessionService {
     this.sessionStore.update({font});
   }
 
+  updateFontSize(fontsize: string) {
+    this.sessionStore.update({fontsize});
+  }
+
   updateColor(color: string) {
     this.sessionStore.update({color});
   }

@@ -9,13 +9,16 @@ import { SessionService} from '../AkitaStore/session.service';
 })
 export class TextHandlerComponent implements OnInit {
   font: string;
-  fontsize: number;
+  fontsize: string;
   color: string;
   italic: string;
   bold: string;
   underline: boolean;
   el: HTMLElement;
-  print = 'Print text...';
+  printphrase = 'Print text...';
+
+  fonts = ['Times New Roman', 'Segoi UI', 'Robotica'];
+  fontsizelist = [1, 2, 3, 4, 5, 6];
 
   constructor(private sessionQuery: SessionQuery,
               private sessionService: SessionService) { }
@@ -29,8 +32,12 @@ export class TextHandlerComponent implements OnInit {
     this.sessionQuery.underlineValue$.subscribe(x => this.underline = x);
   }
 
+  /**selectFont() {
+    this.sessionService.updateFont(this.font);
+  } */
+
   printChangeValue(): string {
-    return this.print = '';
+    return this.printphrase = '';
   }
 
   copyToClipboard() {

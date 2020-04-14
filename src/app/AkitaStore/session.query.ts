@@ -8,7 +8,7 @@ export class SessionQuery extends Query<SessionState> {
   italicValue$ = this.select(store => store.italic);
   boldValue$ = this.select(store => store.bold);
   underlineValue$ = this.select(store => store.underline);
-  selectFontSize$ = this.select(store => store.fontsize)
+  selectFontSize$ = this.select(store => store.fontsize);
   selectFont$ = this.select(store => store.font);
   selectColor$ = this.select(store => store.color);
 
