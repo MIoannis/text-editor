@@ -1,8 +1,8 @@
 <div class="main">
   <div class="color">
     <div class="color-icon" [ngStyle]="{'background-color': color}"></div>
-    <span class="color-input" contenteditable="true" id="color-input-color" (keypress)="lengthCheck()">{{color}}</span>
-    <button class="submitcolorbutton" (click)="submitColor()">Submit</button>
+    <span class="color-input" contenteditable="true" id="color-input-color" (keypress)="dynamicSubmitColor()"
+          (keypress)="lengthCheck()">{{color}}</span>
   </div>
   <div class="select">
     <label class="sizelabel">Size

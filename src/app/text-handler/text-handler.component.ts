@@ -36,7 +36,7 @@ export class TextHandlerComponent implements OnInit {
     }
   }
 
-  submitColor() {
+  dynamicSubmitColor() {
     this.color = document.getElementById('color-input-color').textContent;
     this.sessionService.updateColor(this.color);
   }

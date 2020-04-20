@@ -2,7 +2,7 @@
   outline: 0;
   background-color: white;
   padding: 12px;
-  height: 900px;
+  height: 47vmax;
   width: 636px;
   margin: auto;
   overflow: scroll;
@@ -39,6 +39,7 @@
 }
 
 .select-font {
+  width: 10vmax;
   border-radius: 10px;
   position: inherit;
   height: 34px;
@@ -47,10 +48,12 @@
 }
 
 .select-font-size {
+  width: 3.5vmax;
   border-radius: 10px;
 }
 
 .sizelabel {
+  font-weight: bold;
   position: inherit;
   height: 34px;
   left: 3vmax;
@@ -67,9 +70,9 @@
 
 .color-icon {
   outline: 0;
-  margin-left: 110px;
+  margin-left: 223px;
   position: inherit;
-  width: 75px;
+  width: 5vmax;
   height: 50px;
   border-radius: 10px;
   border-style: solid;
@@ -78,14 +81,15 @@
 }
 
 .color-input {
+  font-weight: bold;
+  color: #396af0;
   outline: 0;
-  color: rgba(0, 0, 0, 0.5);
   font-size: 1.3em;
   text-align: center;
   padding-top: 15px;
-  margin-left: 223px;
+  margin-left: 110px;
   position: inherit;
-  width: 75px;
+  width: 5vmax;
   height: 35px;
   border-radius: 10px;
   background-color: white;
