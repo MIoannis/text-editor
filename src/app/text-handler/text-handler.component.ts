@@ -31,7 +31,7 @@ export class TextHandlerComponent implements OnInit {
   }
 
   lengthCheck() {
-    if (document.getElementById('color-input-color').textContent.length > 6) {
+    if (document.getElementById('color-input-color').textContent.length > 7) {
       document.getElementById('color-input-color').textContent = document.getElementById('color-input-color').textContent.slice(0, -1);
     }
   }
