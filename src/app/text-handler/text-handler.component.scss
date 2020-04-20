@@ -1,17 +1,11 @@
-.main{
-  width: 1839px;
-  height: 952px;
-}
-
 .list {
   outline: 0;
   background-color: white;
   padding: 12px;
   height: 900px;
   width: 636px;
-  margin-left: 600px;
-  border-width: 1px;
-  border-style: solid;
+  margin: auto;
+  overflow: scroll;
 }
 
 .textarea {
@@ -22,11 +16,10 @@
 }
 
 .edit-buttons {
-  background-color: rgba(255, 255, 255, 0.5);
   height: 32px;
   display: inline-flex;
   justify-content: center;
-  width: 1839px;
+  width: 95vmax;
   outline: 0;
 
 }
@@ -46,14 +39,63 @@
 }
 
 .select-font {
+  border-radius: 10px;
   position: inherit;
   height: 34px;
   top: 7px;
-  left: 400px;
+  left: 7vmax;
 }
 
 .select-font-size {
+  border-radius: 10px;
+}
+
+.sizelabel {
   position: inherit;
   height: 34px;
-  left: 350px;
+  left: 3vmax;
+}
+
+.color {
+  outline: 0;
+  position: absolute;
+  left: 1vmax;
+  top: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.color-icon {
+  outline: 0;
+  margin-left: 110px;
+  position: inherit;
+  width: 75px;
+  height: 50px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+}
+
+.color-input {
+  outline: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 223px;
+  position: inherit;
+  width: 75px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+}
+
+.submitcolorbutton {
+  position: inherit;
+  margin-top: 60px;
+  margin-left: 240px;
 }

@@ -17,9 +17,9 @@ export function createInitialState(): SessionState {
     underline: false,
     bold: null,
     italic: null,
-    color: 'Black',
+    color: '#000000',
     font: 'Times New Roman',
-    fontsize: '1em',
+    fontsize: '2em',
   };
 }
 

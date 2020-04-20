@@ -1,17 +1,23 @@
-div {
+.about {
+  position: absolute;
   width: 100%;
   height: 100%;
+  background-color: white;
+}
+
+.about-theme {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  color: white;
 }
 
 p {
   font-size: x-large;
   text-align: center;
-  padding-top: 100px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-top: 13%;
+  margin: auto;
   font-family: "Segoe UI", serif;
-}
-
-.about-text-theme {
-  color: white;
+  line-height: 1.25em;
 }

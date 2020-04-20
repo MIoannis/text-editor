@@ -14,11 +14,9 @@ export class TextHandlerComponent implements OnInit {
   italic: string;
   bold: string;
   underline: boolean;
-  el: HTMLElement;
   printphrase = 'Print text...';
-
-  fonts = ['Times New Roman', 'Segoi UI', 'Robotica'];
-  fontsizelist = [1, 2, 3, 4, 5, 6];
+  fonts = ['Times New Roman', 'Arial', 'Georgia'];
+  fontsizelist = ['1em', '2em', '3em', '4em', '5em', '6em'];
 
   constructor(private sessionQuery: SessionQuery,
               private sessionService: SessionService) { }
@@ -32,16 +30,33 @@ export class TextHandlerComponent implements OnInit {
     this.sessionQuery.underlineValue$.subscribe(x => this.underline = x);
   }
 
-  /**selectFont() {
+  lengthCheck() {
+    if (document.getElementById('color-input-color').textContent.length > 6) {
+      document.getElementById('color-input-color').textContent = document.getElementById('color-input-color').textContent.slice(0, -1);
+    }
+  }
+
+  submitColor() {
+    this.color = document.getElementById('color-input-color').textContent;
+    this.sessionService.updateColor(this.color);
+  }
+
+  selectSize(event) {
+    this.fontsize = event.target.value;
+    this.sessionService.updateFontSize(this.fontsize);
+  }
+
+  selectFont(event) {
+    this.font = event.target.value;
     this.sessionService.updateFont(this.font);
-  } */
+  }
 
   printChangeValue(): string {
     return this.printphrase = '';
   }
 
   copyToClipboard() {
-    this.el = document.getElementById('textarea');
+    document.getElementById('textarea');
     document.execCommand('selectAll');
     document.execCommand('copy');
   }

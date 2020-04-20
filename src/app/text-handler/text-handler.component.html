@@ -1,12 +1,17 @@
 <div class="main">
+  <div class="color">
+    <div class="color-icon" [ngStyle]="{'background-color': color}"></div>
+    <span class="color-input" contenteditable="true" id="color-input-color" (keypress)="lengthCheck()">{{color}}</span>
+    <button class="submitcolorbutton" (click)="submitColor()">Submit</button>
+  </div>
   <div class="select">
-    <label class="select-font-size">Size
-      <select>
-        <option *ngFor="let item of fontsizelist">{{item}}</option>
+    <label class="sizelabel">Size
+      <select class="select-font-size" (change)="selectSize($event)">
+        <option *ngFor="let item of fontsizelist" [value]="item">{{item}}</option>
       </select>
     </label>
-    <select class="select-font">
-      <option *ngFor="let item of fonts" (click)="selectFont()">{{item}}</option>
+    <select class="select-font" (change)="selectFont($event)">
+      <option *ngFor="let item of fonts" [value]="item">{{item}}</option>
     </select>
   </div>
   <div class="edit-buttons">
@@ -15,10 +20,10 @@
     <button class="underlinebutton" style="text-decoration: underline" (click)="underlineEvent()">U</button>
     <button class="copybutton" (click)="copyToClipboard()">Copy</button>
   </div>
-  <div class="list" [ngStyle]="{'font-size': fontsize}" (click)="printChangeValue()">
+  <div class="list" [ngStyle]="{'font-family': font, 'font-size': fontsize, color: color, 'font-style': italic,
+  'font-weight': bold}" (click)="printChangeValue()">
     <span [ngClass]="{'wrapper': underline}" [ngStyle]="{'border-bottom-color': color}">
-      <span contenteditable="true" [ngStyle]="{'font-family': font, color: color,
-        'font-style': italic,'font-weight': bold}" class="textarea" id="textarea">
+      <span contenteditable="true" class="textarea" id="textarea">
         <span style="font-style: italic" class="print">{{printphrase}}</span>
       </span>
     </span>
